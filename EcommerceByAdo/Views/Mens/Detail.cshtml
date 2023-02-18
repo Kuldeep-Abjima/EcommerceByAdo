@@ -1,0 +1,187 @@
+﻿@model Mens
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+    .product-img {
+        border-radius: 28px;
+        box-shadow: 4px 6px 8px 0 rgba(22,22,26,0.18);
+    }
+
+    .left-column {
+        width: 54%;
+        position: relative;
+        padding-left: 178px;
+    }
+
+    .right-column {
+        width: 35%;
+        margin-top: 60px;
+    }
+
+    .product-description {
+        border-bottom: 1px solid #E1E8EE;
+        margin-bottom: 20px;
+    }
+
+        .product-description span {
+            font-size: 12px;
+            color: #358ED7;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .product-description h1 {
+            font-weight: 300;
+            font-size: 52px;
+            color: #43484D;
+            letter-spacing: -2px;
+        }
+
+        .product-description p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #86939E;
+            line-height: 24px;
+        }
+    /* Product Color */
+    .product-color {
+        margin-bottom: 30px;
+    }
+
+    .color-choose div {
+        display: inline-block;
+    }
+
+    .color-choose input[type=&amp;quot;radio&amp;quot;] {
+        display: none;
+    }
+
+        .color-choose input[type=&amp;quot;radio&amp;quot;] + label span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: -1px 4px 0 0;
+            vertical-align: middle;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .color-choose input[type=&amp;quot;radio&amp;quot;] + label span {
+            border: 2px solid #FFFFFF;
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+        }
+
+        .color-choose input[type=&amp;quot;radio&amp;quot;]#red + label span {
+            background-color: #C91524;
+        }
+
+        .color-choose input[type=&amp;quot;radio&amp;quot;]#blue + label span {
+            background-color: #314780;
+        }
+
+        .color-choose input[type=&amp;quot;radio&amp;quot;]#black + label span {
+            background-color: #323232;
+        }
+
+        .color-choose input[type=&amp;quot;radio&amp;quot;]:checked + label span {
+            background-image: url(images/check-icn.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    .product-price {
+        align-items: center;
+    }
+
+        .product-price span {
+            font-size: 26px;
+            font-weight: 300;
+            color: #43474D;
+            margin-right: 20px;
+        }
+
+    .cart-btn {
+        display: inline-block;
+        background-color: #B76E79;
+        border-radius: 12px;
+        font-size: 16px;
+        font-family: cursive;
+        color: #ffff;
+        text-decoration: none;
+        padding: 15px 27px;
+        transition: all .5s;
+    }
+
+        .cart-btn:hover {
+            background-color: beige;
+            color: white;
+        }
+
+    .product-detail {
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 62px
+    }
+
+    .Pro-price {
+        margin: 2px;
+        font-size: 49px;
+        font-family: ui-monospace
+    }
+</style>
+<div class="product-detail">
+    <div class="left-column">
+        <img data-image="black" src="@Model.CImage" alt="" class="product-img">
+        <img data-image="blue" src="images/blue.png" alt="">
+        <img data-image="red" class="active" src="images/red.png" alt="">
+    </div>
+
+
+    <!-- Right Column -->
+    <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+            <span>@Model.Category</span>
+            <h1>@Model.CName</h1>
+            <p>@Model.Rate</p>
+        </div>
+
+        <!-- Product Configuration -->
+        <div class="product-configuration">
+
+            <!-- Product Color -->
+            <div class="product-color">
+                <span>Color</span>
+
+                <div class="color-choose">
+                    <div>
+                        <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                        <label for="red"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                        <label for="blue"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="black" type="radio" id="black" name="color" value="black">
+                        <label for="black"><span></span></label>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+            <div class="Pro-price">₹ @Model.Rate</div>
+            <a asp-area="" asp-controller="AddToCart" asp-action="Cart" asp-route-id="@Model.Identifier" class="cart-btn">Add to cart</a>
+        </div>
+    </div>
+</div>
