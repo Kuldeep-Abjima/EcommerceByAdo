@@ -26,6 +26,14 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Mens" asp-action="Index">Mens</a>
                         </li>
                     </ul>
+                    <ul class="head-icon">
+                        <li class="img-icons">
+                            <img src="~/images/690150.png" class="image-search-logo" />
+                        </li>
+                        <li class="img-icons">
+                            <a asp-area="" asp-controller="AddToCart" asp-action="index"><img src="~/images/shopping-cart-svg-png-icon-download-28.png" class="image-search-logo" /></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -37,8 +45,28 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - EcommerceByAdo - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+        <div class="container footer-con">
+            <nav class="footbar">
+                <ul class="foot-item">
+                    <li class="nav-foot">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="foot-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Mens</a>
+                    </li>
+                    <li class="foot-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Womens</a>
+                    </li>
+                    <li class="foot-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Kids</a>
+                    </li>
+
+                </ul>
+
+                
+            </nav>
+            &copy; 2023 - BixyBuy - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

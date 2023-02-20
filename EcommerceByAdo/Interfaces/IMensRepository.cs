@@ -1,5 +1,4 @@
 ﻿using EcommerceByAdo.Models;
-using EcommerceByAdo.ViewModel;
 
 namespace EcommerceByAdo.Interfaces
 {
@@ -7,6 +6,10 @@ namespace EcommerceByAdo.Interfaces
     {
         void add(Mens mens);
         List<Mens> GetAll();
-        Mens getbyId(long id);
+        Mens getbyId(Guid id);
+
+        Mens UpdatebyId(Mens men);
+
+        bool DeletebyId(Guid id);
     }
 }

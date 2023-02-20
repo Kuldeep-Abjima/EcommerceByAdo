@@ -1,18 +1,259 @@
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #f2f2f2;
 }
+
+@media (min-width: 576px) {
+    .navbar-expand-sm .navbar-nav {
+        flex-direction: row;
+        padding-left: 400px;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.55);
+    padding-right: 93px;
+    font-family: metropolis-bold serif sans-serif;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(0,0,0,.9);
+    font-family: cursive;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    font-size: 20px;
+    letter-spacing: .9px;
+}
+
+.image-search-logo {
+    width: 28px;
+    height: 27px;
+}
+
+.head-icon {
+    list-style: none;
+    display: flex;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.img-icons {
+    padding-right: 22px;
+    padding-top: 15px;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 100%;
+    padding: 0px;
+}
+
+.mb-3 {
+    margin-bottom: 0.8rem !important;
+}
+
+.cards-wrapper {
+    display: flex;
+    padding: 70px;
+}
+
+.card-home {
+    margin: 0.8em;
+    width: calc(100%/5);
+    border-radius: 0px;
+    box-shadow: 2px 6px 8px 0 rgba(22,22,26,0.18);
+}
+
+.card-header {
+    padding: 0.5rem 1rem;
+    border-bottom: 0px solid rgba(0,0,0,.125);
+    background-color: rgb(242 242 242);
+    text-align: center;
+    margin-bottom: -37px;
+    padding-top: 39px;
+    /*font-style: italic;
+    font-family: Cormorant-Italic, Serif, Sans-Serif;
+    font-weight: 500;
+    font-size: 40px;*/
+}
+
+.toproducts {
+    font-style: italic;
+    font-family: Cormorant-Italic, Serif, Sans-Serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #333;
+}
+
+.row-cols-2 {
+    display: flex;
+}
+
+.men-category-image {
+    width: 950px;
+    transition: 1s ease-in-out;
+}
+
+.w-category-image {
+    width: 750px;
+    float: left;
+    transition: 1s ease-in-out;
+}
+
+    .w-category-image:hover {
+        opacity: .5;
+        width: 950px;
+    }
+
+.col-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+    float: right;
+    padding-left: 727px;
+}
+
+.row-cols-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-top: -159px;
+    padding-right: 727px;
+    padding-bottom: 41px
+}
+
+
+.kids-category-image {
+    width: 854px;
+    height: 310px;
+    transition: 1s ease-in-out;
+}
+
+    .kids-category-image:hover {
+        opacity: .5;
+        width: 950px;
+        height: 510px;
+    }
+
+.Category {
+    text-align: center;
+}
+
+.h3-cate {
+    padding-bottom: 36px;
+    font-style: italic;
+    font-family: Cormorant-Italic, Serif, Sans-Serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #333;
+}
+
+.footer-con {
+    background-color: black;
+    padding-top: 51px;
+}
+
+.footer[b-p26fobkcqh] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 104px;
+}
+
+.foot-item {
+    display: flex;
+    list-style: none;
+}
+
+.footbar {
+    margin-top: -49px;
+    margin-bottom: -2rem;
+}
+
+.pb-3 {
+    padding-bottom: 6rem !important;
+}
+
+.lr-btn {
+    margin-bottom: 39px;
+    margin-top: 5px;
+    width: 314px;
+    height: 52px;
+    padding-top: 13px;
+    border-radius: 36px;
+    border-color: #B76E79;
+    background-color: #B76E79;
+    transition: 1s ease-in-out
+}
+
+    .lr-btn:hover {
+        width: 350px;
+        background-color: beige;
+        color: #B76E79;
+        border-color: beige;
+    }
+
+.lr-head {
+    padding-bottom: 33px;
+    font-family: cursive;
+    color: #d1cdba;
+    font-size: 41px;
+    text-align: center;
+    letter-spacing: -1px
+}
+
+.registration-card {
+    width: 100%;
+    height: 30%;
+}
+
+.registration-col {
+}
+
+.card-profile {
+    background-color: beige;
+    margin-bottom: -52px
+}
+
+.lr-bg {
+    background-color: beige
+}
+
+.bg-form {
+    background-color: beige;
+    margin-top: -29px;
+    padding-bottom: 0rem !important
+}
+
+.col-reg-form {
+    margin-bottom: -55px
+}
+
+.reg-form-h3 {
+    font-family: cursive
+}
+
+.discard-icon {
+    height: 43px;
+    margin-right: 45px;
+}
+
+    .discard-icon:hover {
+        box-shadow: 0px 2px 2px rgb(128, 128, 128);
+        height: 50px
+    }

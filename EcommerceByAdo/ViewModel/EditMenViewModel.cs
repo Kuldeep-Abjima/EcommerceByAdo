@@ -8,9 +8,11 @@ namespace EcommerceByAdo.ViewModel
 
         public IFormFile CImage { get; set; }
 
-        public int Rate { get; set; }
-        public Category Category { get; set; }
+        public int? Rate { get; set; }
+       
+        public Category? Category { get; set; }
 
         public string? URL { get; set; }
+    
     }
 }

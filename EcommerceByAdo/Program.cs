@@ -1,3 +1,4 @@
+using EcommerceByAdo.Data;
 using EcommerceByAdo.Interfaces;
 using EcommerceByAdo.Repositpory;
 using EcommerceByAdo.Services;
@@ -9,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IPhotoServices, PhotoServices>();
 builder.Services.AddTransient<IMensRepository, MensRepository>();
+builder.Services.AddTransient<IProductATCRepository, ProductATCRepository>();
+builder.Services.AddTransient<IDataBaseConnection, DataBaseConnection>();
 builder.Services.Configure<CloudinarySetting>(builder.Configuration.GetSection("CloudinarySetting"));
 
 var app = builder.Build();
