@@ -8,5 +8,7 @@ namespace EcommerceByAdo.Interfaces
         List<AddToCartViewModel> GetAll();
         bool add(Guid id);
         bool DeleteAll(Guid id);
+        bool AddProductQuantity(Guid id);
+        bool LessProductQuantity(Guid id);
     }
 }

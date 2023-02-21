@@ -31,13 +31,11 @@
                                     <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
                                 </div>
                                 <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                    <button class="btn btn-link px-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-
-                                    <input id="form1" name="quantity" value="@items.quantity" type="number"
-                                       class="form-control form-control-sm" />
+                                     <div class="itemselect">
+                                        <a asp-area="" asp-controller="AddToCart" asp-action="AddQuanity" asp-route-id="@items.Id" class="iconbutton"><img src="~/images/icon-plus.svg" alt="plus" onclick="addItem()"></a>
+                                            <span id="count">@items.quantity</span>
+                                        <a asp-area="" asp-controller="AddToCart" asp-action="LessQuanity" asp-route-id="@items.Id" class="iconbutton"><img src="~/images/icon-minus.svg" alt="minus" onclick="removeItem()" class="minusIconimg"></a>
+                                     </div>
 
                                 </div>
                                 <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">

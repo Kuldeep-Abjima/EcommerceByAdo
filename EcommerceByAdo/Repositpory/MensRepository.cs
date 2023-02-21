@@ -7,7 +7,6 @@ namespace EcommerceByAdo.Repositpory
 {
     public class MensRepository : IMensRepository
     {
-        private readonly IConfiguration _configuration;
         private readonly IDataBaseConnection _baseConnection;
 
         public MensRepository(IDataBaseConnection baseConnection)
@@ -21,7 +20,7 @@ namespace EcommerceByAdo.Repositpory
         public List<Mens> GetAll()
         {
            var mens = new List<Mens>();
-            //string cs = _configuration.GetConnectionString("AppDbConnection");
+
             using (SqlConnection con = new SqlConnection(_baseConnection.connection()))
             {
                 SqlCommand cmd = new SqlCommand("sp_getAll", con);
@@ -51,7 +50,6 @@ namespace EcommerceByAdo.Repositpory
 
         public void add(Mens mens)
         {
-            //string cs = _configuration.GetConnectionString("AppDbConnection");
             using (SqlConnection con = new SqlConnection(_baseConnection.connection()))
             {
                 SqlCommand cmd = new SqlCommand("sp_men_add", con);
@@ -72,7 +70,7 @@ namespace EcommerceByAdo.Repositpory
         public Mens getbyId(Guid id)
         {
             var men = new Mens();
-            //string cs = _configuration.GetConnectionString("AppDbConnection");
+
             using (SqlConnection con = new SqlConnection(_baseConnection.connection()))
             {
                 SqlCommand cmd = new SqlCommand("sp_getbyGuidId", con);
@@ -99,11 +97,10 @@ namespace EcommerceByAdo.Repositpory
 
         }
 
-        //TODO
 
         public Mens UpdatebyId(Mens men)
         {
-            //string cs = _configuration.GetConnectionString("AppDbConnection");
+
             using (SqlConnection con = new SqlConnection(_baseConnection.connection()))
             {
                 SqlCommand cmd = new SqlCommand("sp_UpdateMens", con);
@@ -126,7 +123,7 @@ namespace EcommerceByAdo.Repositpory
 
         public bool DeletebyId(Guid id)
         {
-            //string cs = _configuration.GetConnectionString("AppDbConnection");
+
             using (SqlConnection con = new SqlConnection(_baseConnection.connection()))
             {
                 SqlCommand cmd = new SqlCommand("Sp_DeleteManbyId", con);

@@ -90,6 +90,8 @@ namespace EcommerceByAdo.Repositpory
                     cmd.Parameters.AddWithValue("@UserId", product.UserId);
                     cmd.Parameters.AddWithValue("@Quantity", product.Quantity);
                     cmd.Parameters.AddWithValue("@Date", product.Date);
+                    cmd.Parameters.AddWithValue("@orderId", product.OrderID);
+
                     con.Open();
                     var result = cmd.ExecuteNonQuery();
                     con.Close();
@@ -115,6 +117,35 @@ namespace EcommerceByAdo.Repositpory
                 return result > 0 ? true : false;
 
             }
+        }
+
+        public bool AddProductQuantity(Guid id)
+        {
+            using(SqlConnection con = new SqlConnection(_baseConnection.connection()))
+            {
+                SqlCommand cmd = new SqlCommand("sp_add_product_quanity", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ProductCartId", id);
+                con.Open() ;
+                var result = cmd.ExecuteNonQuery();
+                con.Close();
+                return result > 0 ? true : false;
+            }
+
+        }
+        public bool LessProductQuantity(Guid id)
+        {
+            using (SqlConnection con = new SqlConnection(_baseConnection.connection()))
+            {
+                SqlCommand cmd = new SqlCommand("sp_Less_product_quanity", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                var result = cmd.ExecuteNonQuery();
+                con.Close();
+                return result > 0 ? true : false;
+            }
+
         }
     }
 }

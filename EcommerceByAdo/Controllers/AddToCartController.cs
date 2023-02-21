@@ -24,9 +24,20 @@ namespace EcommerceByAdo.Controllers
             return RedirectToAction("Index", "AddToCart");
         }
 
-        public ActionResult Delete(Guid id)
+        public IActionResult Delete(Guid id)
         {
             var result = _productATC.DeleteAll(id);
+            return RedirectToAction("Index", "AddToCart");
+        }
+        
+        public IActionResult AddQuanity(Guid id)
+        {
+            _productATC.AddProductQuantity(id);
+            return RedirectToAction("Index", "AddToCart");
+        }
+        public IActionResult LessQuanity(Guid id)
+        {
+            _productATC.LessProductQuantity(id);
             return RedirectToAction("Index", "AddToCart");
         }
     }

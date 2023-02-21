@@ -257,3 +257,40 @@ body {
         box-shadow: 0px 2px 2px rgb(128, 128, 128);
         height: 50px
     }
+.itemselect {
+    background-color: hsl(223, 64%, 98%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 13px;
+    margin: 15px 0px;
+    font-weight: 700;
+    width: 158px;
+}
+
+img[src='icons/icon-plus.svg'] {
+    position: relative;
+    left: 20px;
+    cursor: pointer;
+}
+
+img[src="icons/icon-minus.svg"] {
+    position: relative;
+    left: 30px;
+    cursor: pointer;
+    margin-left: 33px;
+}
+.minusIconimg{
+    margin-left: 27px;
+}
+
+.iconbutton {
+    border: none;
+    text-align: center;
+    background: transparent
+}
+#count {
+    margin-left: 18px
+}
